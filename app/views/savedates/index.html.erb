@@ -1,8 +1,24 @@
-<%= link_to "Enter New Date", new_savedate_path %>
-
 <h2>Save the Date</h2>
-<ul>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Location</th>
+  </tr>
+
+
   <% @savedates.each do |savedate| %>
-  <li><%= link_to savedate.calendardate, savedate %></li>
+    <tr>
+      <td><%= link_to savedate.eventdate, savedate %></td>
+      <td><%= savedate.title %></td>
+      <td><%= savedate.location %></td>
+    </tr>
+
   <% end %>
-</ul>
+
+</table>
+
+<br /><br />
+
+<%= link_to "Enter New Date", new_savedate_path %>

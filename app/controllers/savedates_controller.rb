@@ -12,7 +12,7 @@ class SavedatesController < ApplicationController
     @savedate = Savedate.new(params[:savedate])
     if @savedate.save
       flash[:notice] = "Date has been saved."
-      redirect_to @savedate
+      redirect_to savedates_path
     else
       flash[:alert] = "Date has not been saved."
       render :action => "new"

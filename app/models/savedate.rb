@@ -1,6 +1,5 @@
 class Savedate < ActiveRecord::Base
-  attr_accessible :calendardate, :location, :title
+  attr_accessible :location, :title, :eventdate
 
-  #validates :calendardate, :presence => true
-  validates :calendardate, :presence => { message: "Date can't be blank." }
+  validates :eventdate, :presence => { message: "Date can't be blank." }
 end

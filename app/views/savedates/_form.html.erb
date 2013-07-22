@@ -1,8 +1,8 @@
 <%= form_for(@savedate) do |f| %>
   <%= f.error_messages %>
     <p>
-      <%= f.label :calendardate, "Calendar Date" %><br />
-      <%= f.text_field :calendardate %>
+      <%= f.label :eventdate, "Event Date" %><br />
+      <%= f.datetime_select :eventdate, :prompt => {:day => 'Choose day', :month => 'Choose month', :year => 'Choose year'}, :order => [:day, :month, :year] %>
     </p>
 
     <p>
