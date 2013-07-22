@@ -1,18 +1,19 @@
 <%= form_for(@savedate) do |f| %>
-  <p>
-    <%= f.label :calendardate, "Calendar Date" %><br />
-    <%= f.text_field :calendardate %>
-  </p>
+  <%= f.error_messages %>
+    <p>
+      <%= f.label :calendardate, "Calendar Date" %><br />
+      <%= f.text_field :calendardate %>
+    </p>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </p>
 
-  <p>
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </p>
+    <p>
+      <%= f.label :location %><br />
+      <%= f.text_field :location %>
+    </p>
 
-  <%= f.submit "Save Date" %>
+    <%= f.submit "Save Date" %>
 <% end %>

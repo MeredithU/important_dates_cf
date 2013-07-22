@@ -1,7 +1,7 @@
 class SavedatesController < ApplicationController
 
   def index
-
+    @savedates = Savedate.all
   end
 
   def new
@@ -14,7 +14,7 @@ class SavedatesController < ApplicationController
       flash[:notice] = "Date has been saved."
       redirect_to @savedate
     else
-      flash[:alert] = "Your date has not been saved."
+      flash[:alert] = "Date has been saved."
       render :action => "new"
     end
   end
