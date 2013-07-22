@@ -16,7 +16,7 @@ feature 'Saving Important Dates' do
 
   scenario "can not save a date without an actual date" do
     click_button 'Save Date'
-    page.should have_content("Date has been saved.")
+    page.should have_content("Date has not been saved.")
     page.should have_content("Date can't be blank.")
   end
 end
