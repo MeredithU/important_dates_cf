@@ -2,6 +2,9 @@ class SavedatesController < ApplicationController
 
   def index
     @savedates = Savedate.all
+
+    @upcoming_dates = Savedate.where('eventdate > ?', Date.today)
+    @upcoming_dates_order = @upcoming_dates.order("eventdate")
   end
 
   def new

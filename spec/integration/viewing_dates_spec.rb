@@ -1,3 +1,5 @@
+# Not working, refactor
+
 require 'spec_helper'
 
 feature "Viewing dates" do

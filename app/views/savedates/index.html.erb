@@ -8,7 +8,7 @@
   </tr>
 
 
-  <% @savedates.each do |savedate| %>
+  <% @upcoming_dates_order.each do |savedate| %>
     <tr>
       <td><%= link_to savedate.eventdate, savedate %></td>
       <td><%= savedate.title %></td>
